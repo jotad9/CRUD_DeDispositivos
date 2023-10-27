@@ -1,20 +1,12 @@
 {
   "dispositivos": [
     {
-      "id": 7,
-      "marca": "Sony",
-      "modelo": "Xperia 5 III",
-      "color": "Negro",
-      "almacenamiento": "128GB",
-      "procesador": "Snapdragon 888"
-    },
-    {
-      "id": 8,
       "marca": "LG",
       "modelo": "Velvet 2",
-      "color": "Blanco",
+      "color": "Blancooo",
       "almacenamiento": "128GB",
-      "procesador": "Snapdragon 765G"
+      "procesador": "Snapdragon 765G",
+      "id": 8
     },
     {
       "id": 9,

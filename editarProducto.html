@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <h1>Crear un nuevo producto</h1>
-    <form id="crearProductoForm" action="index.html" method="post">
+    <h1>Editar un nuevo producto</h1>
+    <form id="editarProductoForm" action="index.html" method="PUT">
         <label for="marca" class="label-ajustado">Marca:</label>
         <input type="text" id="marca" name="marca" required>
         <br>
@@ -26,10 +26,10 @@
         <label for="procesador" class="label-ajustado">Procesador:</label>
         <input type="text" id="procesador" name="procesador" required>
         <br>
-        <button type="submit" class="btn btn-primary mt-3">Crear Producto</button>
+        <button id="guardarEdicion" type="submit" class="btn btn-primary mt-3">Editar Producto</button>
     </form>
 
-    <script type="module" src="crearProducto.js"></script>
+    <script type="module" src="editarProducto.js"></script>
 </body>
 
 </html>

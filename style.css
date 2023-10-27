@@ -15,3 +15,8 @@ form {
   margin-top: 5%;
   text-align: center;
 }
+
+.label-ajustado {
+  width: 100px; /* Ajusta este valor según tus preferencias */
+  display: inline-block; /* Esto asegura que los elementos se alineen correctamente */
+}

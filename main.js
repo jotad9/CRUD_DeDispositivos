@@ -3,21 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function mostrarProductos() {
     fetch('http://localhost:3000/dispositivos', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('La respuesta del servidor no es válida');
-      }
-      return response.json();
-    })
-    .then(data => {
-      let html = '';
-      for (let dispositivo of data) {
-        html += `
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('La respuesta del servidor no es válida');
+        }
+        return response.json();
+      })
+      .then(data => {
+        let html = '';
+        for (let dispositivo of data) {
+          html += `
         <tr>
           <td>${dispositivo.id}</td>
           <td>${dispositivo.marca}</td>
@@ -26,45 +26,52 @@ document.addEventListener("DOMContentLoaded", function () {
           <td>${dispositivo.almacenamiento}</td>
           <td>${dispositivo.procesador}</td>
           <td><button class="btn btn-danger" data-dispositivo-id="${dispositivo.id}">Eliminar</button></td>
-          
+          <td><button class="btn btn-primary" data-dispositivo-id="${dispositivo.id} ">Editar</button></td>
         </tr>
         `;
-      }
-      cuerpoTabla.innerHTML = html;
+        }
+        cuerpoTabla.innerHTML = html;
 
-      
-    // Agregar manejador de eventos para los botones de eliminación
-    const botonesEliminar = cuerpoTabla.querySelectorAll('button[data-dispositivo-id]');
-    botonesEliminar.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const dispositivoId = this.getAttribute('data-dispositivo-id');
-        eliminarDispositivo(dispositivoId);
+
+        // Agregar manejador de eventos para los botones de eliminación
+        const botonesEliminar = cuerpoTabla.querySelectorAll('button[data-dispositivo-id]');
+        botonesEliminar.forEach(btn => {
+          btn.addEventListener('click', function () {
+            const dispositivoId = this.getAttribute('data-dispositivo-id');
+            if (this.classList.contains('btn-danger')) {
+              eliminarDispositivo(dispositivoId);
+            } else {
+              editarDispositivo(dispositivoId);
+            }
+          });
+        });
+      })
+
+      .catch(error => {
+        console.error('Error al cargar los productos:', error);
       });
-    });
-  })
-  
-  .catch(error => {
-    console.error('Error al cargar los productos:', error);
-  });
-}
+  }
 
   function eliminarDispositivo(dispositivoId) {
     fetch(`http://localhost:3000/dispositivos/${dispositivoId}`, {
-      method: 'DELETE'
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('La respuesta del servidor no es válida');
-      }
-      mostrarProductos();
-      return response.json();
-      
-    })
-    .catch(error => {
-      console.error('Error al eliminar el dispositivo:', error);
-    });
+        method: 'DELETE'
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('La respuesta del servidor no es válida');
+        }
+        mostrarProductos();
+        return response.json();
+
+      })
+      .catch(error => {
+        console.error('Error al eliminar el dispositivo:', error);
+      });
+  }
+
+  function editarDispositivo(dispositivoId) {
+    window.location.href = `editarProducto.html?id=${dispositivoId}`;
   }
 
   mostrarProductos();
 });
-
