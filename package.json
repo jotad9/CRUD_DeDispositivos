@@ -10,5 +10,11 @@
   },
   "devDependencies": {
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1",
+    "node-fetch": "^3.3.2"
   }
 }

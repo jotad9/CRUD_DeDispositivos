@@ -1,0 +1,60 @@
+{
+  "dispositivos": [
+    {
+      "id": 7,
+      "marca": "Sony",
+      "modelo": "Xperia 5 III",
+      "color": "Negro",
+      "almacenamiento": "128GB",
+      "procesador": "Snapdragon 888"
+    },
+    {
+      "id": 8,
+      "marca": "LG",
+      "modelo": "Velvet 2",
+      "color": "Blanco",
+      "almacenamiento": "128GB",
+      "procesador": "Snapdragon 765G"
+    },
+    {
+      "id": 9,
+      "marca": "Motorola",
+      "modelo": "Moto G100",
+      "color": "Azul",
+      "almacenamiento": "128GB",
+      "procesador": "Snapdragon 870"
+    },
+    {
+      "id": 10,
+      "marca": "Nokia",
+      "modelo": "Nokia 9.3 PureView",
+      "color": "Verde",
+      "almacenamiento": "256GB",
+      "procesador": "Snapdragon 888"
+    },
+    {
+      "id": 11,
+      "marca": "xiaomi",
+      "modelo": "redmi 10",
+      "color": "rojo",
+      "almacenamiento": "128gb",
+      "procesador": "snapDragon"
+    },
+    {
+      "marca": "samsung",
+      "modelo": "ultimo",
+      "color": "gris",
+      "almacenamiento": "600gb",
+      "procesador": "snapDragon",
+      "id": 12
+    },
+    {
+      "marca": "xiaomi",
+      "modelo": "a",
+      "color": "a",
+      "almacenamiento": "128gb",
+      "procesador": "snapDragon",
+      "id": 13
+    }
+  ]
+}

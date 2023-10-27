@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Crear un nuevo producto</h1>
+    <form id="crearProductoForm" action="index.html" method="post">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required>
+        <br>
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name= "modelo" required>
+        <br>
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+        <br>
+        <label for="almacenamiento">Almacenamiento:</label>
+        <input type="text" id="almacenamiento" name="almacenamiento" required>
+        <br>
+        <label for="procesador">Procesador:</label>
+        <input type="text" id="procesador" name="procesador" required>
+        <br>
+        <button type="submit" class="btn btn-primary">Crear Producto</button>
+    </form>
+
+    <script type="module" src="crearProducto.js"></script>
+</body>
+
+</html>
